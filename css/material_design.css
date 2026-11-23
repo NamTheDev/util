@@ -981,3 +981,55 @@ a{
 .content-heading{padding:12px 20px}
 .content-heading .page-title{margin:0}
 @media(max-width:839px){.content-heading{padding:10px 12px}}
+
+/* Spacing contract shared by keep and clipboard.
+ * Layout-specific columns may differ; component insets and page gutters do not.
+ */
+:root{
+  --content-gutter:20px;
+  --content-gap:12px;
+  --card-inset:14px;
+  --pane-inset:12px;
+}
+.content-heading{
+  padding:12px var(--content-gutter);
+  gap:var(--content-gap);
+}
+.board-scroll{
+  padding:8px var(--content-gutter) 24px;
+}
+.quick-bar{
+  margin:0 var(--content-gutter) 10px;
+  padding:10px var(--card-inset);
+  gap:var(--content-gap);
+}
+.note-grid{
+  gap:var(--content-gap);
+}
+.note-paper{
+  padding:12px var(--card-inset);
+}
+.note-foot{
+  padding:4px 10px 8px;
+}
+.sidebar-group .sidebar-none{
+  padding:8px 12px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:22px;
+}
+@media(max-width:839px){
+  :root{
+    --content-gutter:12px;
+  }
+  .content-heading{
+    padding:10px var(--content-gutter);
+  }
+  .board-scroll{
+    padding:8px var(--content-gutter) 20px;
+  }
+  .quick-bar{
+    margin:0 var(--content-gutter) 8px;
+    padding:10px;
+  }
+}
