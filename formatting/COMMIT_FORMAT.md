@@ -2,7 +2,7 @@
 
 ## Required structure
 
-Every newly introduced non-merge commit checked by the validation workflow must follow this format:
+Every commit selected by the validation workflow must follow this format:
 
 ```text
 <Type>: <Capitalized message>
