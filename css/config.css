@@ -96,8 +96,8 @@
   --bs-link-hover-color:var(--accent);
   --bs-btn-input-font-size:var(--font-size);
   --bs-radius-5:var(--radius-control);
-  --bs-radius-7:var(--radius-card);
-  --bs-radius-9:var(--radius-dialog);
+  --bs-radius-6:var(--radius-card);
+  --bs-radius-7:var(--radius-dialog);
   --bs-box-shadow:none;
   --bs-box-shadow-sm:none;
   --bs-box-shadow-lg:none;
