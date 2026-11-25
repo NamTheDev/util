@@ -14,3 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 tests/verify_resources.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check dashboard/app.mjs && node --check dashboard/theme.js
+      - run: node --test tests/dashboard.test.mjs
