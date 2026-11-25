@@ -7,6 +7,8 @@ Shared utilities for NamTheDev.
 
 ## Contribution standards
 
+- [Formatting specifications](formatting/README.md)
+
 - [AI Usage Notice](AI_DISCLAIMER.md)
 - [Commit message format](commit_message_format.txt)
 
