@@ -1,19 +1,22 @@
 # util
 
-Shared utilities for NamTheDev.
+## AI Disclaimer
 
-- [Design principles](design/DESIGN_PRINCIPLES.md) — Bootstrap-first rules, minimal visual identity, accessibility and verification.
-- [Design configuration](design/config.css) — Catppuccin Mocha / Lavender, fonts, spacing, radius, motion and Bootstrap 6 token mappings. See [usage](design/README.md).
+Developed with assistance from OpenAI's ChatGPT in shared CSS configuration, design documentation, repository organization, and automated validation workflows.
 
-## Contribution standards
+See [AI_DISCLAIMER.md](AI_DISCLAIMER.md) for the full disclosure.
 
+## Introduction
+
+Shared utilities and canonical design and contribution standards for NamTheDev repositories.
+
+## Resources
+
+- [Design principles](design/DESIGN_PRINCIPLES.md)
+- [Shared CSS configuration](design/config.css) and [usage](design/README.md)
 - [Formatting specifications](formatting/README.md)
-
-- [AI Usage Notice](AI_DISCLAIMER.md)
 - [Commit message format](commit_message_format.txt)
-
-GitHub Actions validate both standards on pushes and pull requests.
 
 ## License
 
-Original repository contributions are licensed under the [MIT License](LICENSE). Catppuccin palette attribution and its original license are preserved in [third-party notices](THIRD_PARTY_NOTICES.md). Third-party software remains subject to its own license terms.
+Original repository contributions are licensed under the [MIT License](LICENSE). Third-party materials retain their own terms as documented in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

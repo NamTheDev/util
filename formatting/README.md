@@ -4,6 +4,7 @@ Canonical contribution-format specifications for NamTheDev repositories.
 
 - [Commit message specification](COMMIT_FORMAT.md)
 - [AI disclosure specification](AI_DISCLOSURE.md)
+- [Project README specification](README_FORMAT.md)
 
 ## Adoption
 
