@@ -1,9 +1,7 @@
-# Shared Bootstrap CSS
+# Shared Bootstrap 6 CSS
 
-`bootstrap.css` is the canonical **theme override** for keep and clipboard. Both apps load the unmodified, locally hosted Bootstrap 5.3.8 distribution first and mirror this file into their shared stylesheet. Bootstrap classes supply standard components and utilities; the theme retains a monochrome dark-first palette, Roboto, compact spacing and shared responsive sidebar behavior. Product-specific layout and behavior stay in each app.
+The canonical override is [bootstrap.css](bootstrap.css). Both applications load an unmodified Bootstrap 6.0.0-alpha.2 distribution before this file. Use Bootstrap v6 component variants, `theme-*` modifiers, `data-bs-theme`, form controls and utility classes. CSS variables customize the visual system; only app-specific layout and state hooks remain custom.
 
-The older `material_design.css` remains as a historical compatibility asset. Do not sync it into the migrated applications.
+Reference: https://getbootstrap.com/llms-full.txt (Bootstrap 6). Browser floor: Chrome/Edge 138, Firefox 147, Safari 26. This is an alpha release and should be verified before production deployment.
 
-Use native Bootstrap 5.3 classes for buttons, navigation, forms, cards, badges, dialogs, dropdowns, spacing and flex utilities. Existing event handlers own the drawer, modal and menu lifecycle; do not add Bootstrap JS handlers on top of those controls.
-
-See https://getbootstrap.com/docs/5.3/ for version-matched documentation. Bootstrap is MIT licensed.
+Existing event handlers retain control of overlay visibility and persistence; avoid attaching duplicate plugin listeners. The previous Material Design stylesheet remains a historical asset, not the synchronization source for migrated apps.
