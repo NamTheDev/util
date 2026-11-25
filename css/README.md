@@ -1,7 +1,7 @@
-# Shared Bootstrap 6 CSS
+# Design configuration
 
-The canonical override is [bootstrap.css](bootstrap.css). Both applications load an unmodified Bootstrap 6.0.0-alpha.2 distribution before this file. Use Bootstrap v6 component variants, `theme-*` modifiers, `data-bs-theme`, form controls and utility classes. CSS variables customize the visual system; only app-specific layout and state hooks remain custom.
+`css/config.css` is the only shared CSS configuration. It defines framework-independent semantic colors, type, density, shape and motion tokens and maps them to Bootstrap 6 root variables. It does not contain a framework build or application component/layout rules.
 
-Reference: https://getbootstrap.com/llms-full.txt (Bootstrap 6). Browser floor: Chrome/Edge 138, Firefox 147, Safari 26. This is an alpha release and should be verified before production deployment.
+The default palette is Catppuccin Mocha with Lavender; the existing light-mode switch uses Catppuccin Latte with Lavender. See https://catppuccin.com/palette/ and https://getbootstrap.com/llms-full.txt.
 
-Existing event handlers retain control of overlay visibility and persistence; avoid attaching duplicate plugin listeners. The previous Material Design stylesheet remains a historical asset, not the synchronization source for migrated apps.
+Consumers load their own Bootstrap 6 CSS, then a locally vendored copy of `config.css`, then their own application stylesheet. Keep and Clipboard synchronize only `config.css`. Do not edit consumer copies independently. Use the shared tokens when additional local styles are needed.

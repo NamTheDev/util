@@ -1,5 +1,5 @@
 # util
 
-Reusable utilities and design assets for [NamTheDev](https://github.com/NamTheDev).
+Shared utilities for NamTheDev.
 
-[Bootstrap 6 theme](css/bootstrap.css) is the canonical shared override for keep and clipboard. See [usage and compatibility](css/README.md). The former Material Design stylesheet is retained for historical consumers.
+[Design configuration](css/config.css) — Catppuccin Mocha / Lavender, fonts, spacing, radius, motion and Bootstrap 6 token mappings. See [usage](css/README.md).
