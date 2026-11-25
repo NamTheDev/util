@@ -37,7 +37,7 @@ Change shared design tokens in util first, then synchronize the consumers. Do no
 | Surfaces | Flat, subtle borders, no decorative shadows |
 | Motion | None by default |
 
-Use semantic color roles rather than arbitrary hex values. Lavender highlights primary actions, active navigation, selection and keyboard focus; keep secondary actions visually quiet. Preserve meaningful error, warning, success and informational colors. Use the shared theme switch and `data-bs-theme`; retain browser color-scheme signaling.
+Use semantic color roles rather than arbitrary hex values. Lavender highlights primary actions, active navigation, selection and keyboard focus; keep secondary actions visually quiet. Preserve meaningful error, warning, success and informational colors. Use the shared theme switch and `data-bs-theme`; retain browser color-scheme signaling according to the [native theme signaling specification](../formatting/THEME_SIGNAL.md).
 
 ## 4. Native rounding
 
