@@ -30,7 +30,7 @@ jobs:
         run: |
           mkdir -p _site/dashboard/vendor _site/design
           cp index.html .nojekyll _site/
-          cp dashboard/theme.js dashboard/model.mjs dashboard/app.mjs _site/dashboard/
+          cp dashboard/model.mjs dashboard/app.mjs _site/dashboard/
           cp dashboard/vendor/bootstrap.min.css dashboard/vendor/LICENSE.bootstrap _site/dashboard/vendor/
           cp design/config.css _site/design/
           test -s _site/index.html

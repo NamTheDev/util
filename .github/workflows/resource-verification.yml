@@ -18,5 +18,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node --check dashboard/app.mjs && node --check dashboard/theme.js
+      - run: node --check dashboard/app.mjs
       - run: node --test tests/dashboard.test.mjs
