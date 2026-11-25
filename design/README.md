@@ -7,3 +7,7 @@ The default palette is Catppuccin Mocha with Lavender; the existing light-mode s
 Consumers load their own Bootstrap 6 CSS, then a locally vendored copy of `config.css`, then their own application stylesheet. Keep and Clipboard synchronize only `config.css`. Do not edit consumer copies independently. Use the shared tokens when additional local styles are needed.
 
 Follow the [design principles](DESIGN_PRINCIPLES.md) when authoring or reviewing any consumer UI.
+
+## Licensing
+
+Preserve the copyright and MIT permission notices embedded in `config.css` when copying or distributing the shared stylesheet. See [repository license](../LICENSE) and [third-party notices](../THIRD_PARTY_NOTICES.md).
