@@ -1,6 +1,6 @@
 # Deployment dashboard
 
-Read-only GitHub Actions monitor for NamTheDev public repositories. Open the [dashboard](https://namthedev.github.io/util/) after enabling GitHub Pages at [Settings → Pages](https://github.com/NamTheDev/util/settings/pages): Deploy from a branch, main, / (root).
+Read-only GitHub Actions monitor for NamTheDev public repositories. Open the [dashboard](https://namthedev.github.io/util/) after enabling GitHub Pages at [Settings → Pages](https://github.com/NamTheDev/util/settings/pages): Select **GitHub Actions** as the source. The [deployment workflow](../.github/workflows/deploy-pages.yml) runs on main pushes and manual dispatch, requires all three existing reusable validation workflows to succeed, and publishes only the static dashboard assets. If the source was just changed, run the deployment workflow manually from the Actions tab.
 
 Repository discovery is paginated. Each repository's latest 100 default-branch runs are grouped by workflow ID; older workflows outside that window are not shown. Deployment labels are inferred from names and paths (deploy, pages, publish, release). External hosting status is not monitored. Archived repositories remain visible; private repositories are not accessible without credentials. No secrets or token storage.
 

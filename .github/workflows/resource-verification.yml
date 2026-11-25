@@ -1,6 +1,7 @@
 name: Shared resource verification
 
 on:
+  workflow_call:
   push:
   pull_request:
   workflow_dispatch:

@@ -1,6 +1,7 @@
 name: Commit Message Format
 
 on:
+  workflow_call:
   push:
   pull_request:
 
