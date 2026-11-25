@@ -1,6 +1,6 @@
 # Design principles
 
-These rules apply to Keep, Clipboard, and future projects that adopt the shared design configuration.
+These rules apply to all NamTheDev web applications, including Profile, keep, clipboard and future web applications. MeditorD is explicitly exempt and retains its own design system. Archived repositories are not retroactively modified.
 
 ## 1. Bootstrap first
 
@@ -8,7 +8,11 @@ These rules apply to Keep, Clipboard, and future projects that adopt the shared 
 - Prefer semantic HTML, responsive utilities, standard form controls, native component variants, and `theme-*` modifiers.
 - Use Bootstrap utilities for spacing, alignment, typography, borders, sizing, and rounding wherever they meet the requirement.
 - Customize appearance through documented `--bs-*` tokens. Do not modify the framework distribution.
-- Write custom CSS only for requirements that the framework cannot express cleanly, such as application-specific layouts, dynamic note colors, or interaction states. Keep those rules small and local.
+- Custom CSS is a last resort: keep it to the bare minimum. Prefer, in order, native HTML, Bootstrap components and utilities, documented Bootstrap token configuration, then narrowly scoped custom CSS only for an essential requirement that the installed framework cannot express.
+- Do not recreate framework spacing, sizing, flex/grid alignment, foreground/background colors, borders, typography, radius or other standard styling in local selectors. Put existing utility classes directly on the relevant markup (including generated markup).
+- Do not move redundant rules into inline styles, new helper classes, duplicated shared CSS or a modified Bootstrap distribution. Use inline CSS variables only for genuinely dynamic values, such as a user-selected note color.
+- Retain custom CSS only when necessary for distinct application behavior or identity, e.g. a precise responsive split layout, marquee animation, dynamic note colors or a touch-accessible interaction that utilities cannot preserve. Document the reason for each retained group; remove unused or duplicated declarations during refactors.
+- Maintain the existing layout, visual identity, accessibility, storage and application behavior. A smaller stylesheet is not a reason to break functionality or change an approved design.
 
 ## 2. One source of truth
 
@@ -18,7 +22,7 @@ Each consumer owns its Bootstrap distribution and application stylesheet. Load t
 
 1. Bootstrap CSS.
 2. A locally vendored, identical copy of `config.css`.
-3. Application-specific CSS.
+3. Optional, minimal application-specific CSS for documented exceptions only.
 
 Change shared design tokens in util first, then synchronize the consumers. Do not put application selectors, layouts, or framework distributions into the shared configuration. Avoid hard-coded copies of shared design values in consumer stylesheets.
 
@@ -69,7 +73,7 @@ Prefer HTML and CSS over extra JavaScript; use Bootstrap plugins where appropria
 
 Before considering a change complete, check:
 
-- Native Bootstrap classes and documented token names.
+- Native Bootstrap classes and documented token names; review every remaining custom selector and eliminate any equivalent framework utility or component.
 - Shared configuration copies match util.
 - Dark and light modes, desktop and mobile layouts, and keyboard interactions.
 - Functional regressions, browser tests, and deployment results.

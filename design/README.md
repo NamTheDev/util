@@ -4,7 +4,7 @@
 
 The default palette is Catppuccin Mocha with Lavender; the existing light-mode switch uses Catppuccin Latte with Lavender. See https://catppuccin.com/palette/ and https://getbootstrap.com/llms-full.txt.
 
-Consumers load their own Bootstrap 6 CSS, then a locally vendored copy of `config.css`, then their own application stylesheet. Keep and Clipboard synchronize only `config.css`. Do not edit consumer copies independently. Use the shared tokens when additional local styles are needed.
+Consumers load their own Bootstrap 6 CSS, then a locally vendored copy of `config.css`, then an optional application stylesheet containing only the bare minimum of necessary custom CSS. Use Bootstrap components and utility classes first, and documented framework tokens for configuration. Do not duplicate utility behavior in custom selectors. Profile, keep and clipboard follow this rule; MeditorD is exempt. Keep and Clipboard synchronize only `config.css`. Do not edit consumer copies independently.
 
 Follow the [design principles](DESIGN_PRINCIPLES.md) when authoring or reviewing any consumer UI.
 
