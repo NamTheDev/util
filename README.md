@@ -12,8 +12,6 @@ Shared utilities and canonical design and contribution standards for NamTheDev r
 
 ## Resources
 
-- [Deployment dashboard](https://namthedev.github.io/util/) and [documentation](dashboard/README.md)
-
 - [Design principles](design/DESIGN_PRINCIPLES.md)
 - [Shared CSS configuration](design/config.css) and [usage](design/README.md)
 - [Formatting specifications](formatting/README.md)

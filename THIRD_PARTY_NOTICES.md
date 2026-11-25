@@ -4,7 +4,7 @@
 
 Source: https://github.com/catppuccin/palette
 
-The shared design configuration uses the Catppuccin Mocha and Latte palette values. The upstream MIT license is reproduced below without modification.
+The shared design configuration uses the Catppuccin Mocha palette values. The upstream MIT license is reproduced below without modification.
 
 MIT License
 
@@ -30,4 +30,4 @@ SOFTWARE.
 
 ## Bootstrap
 
-The configuration targets Bootstrap's documented CSS variables. The deployment dashboard distributes Bootstrap 6.0.0-alpha.2; its upstream license is retained at [dashboard/vendor/LICENSE.bootstrap](dashboard/vendor/LICENSE.bootstrap). See https://github.com/twbs/bootstrap/blob/main/LICENSE.
+The configuration targets Bootstrap's documented CSS variables. This repository does not distribute Bootstrap itself; consumers that distribute Bootstrap must retain its upstream license notices. See https://github.com/twbs/bootstrap/blob/main/LICENSE.
