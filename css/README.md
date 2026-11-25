@@ -5,3 +5,5 @@
 The default palette is Catppuccin Mocha with Lavender; the existing light-mode switch uses Catppuccin Latte with Lavender. See https://catppuccin.com/palette/ and https://getbootstrap.com/llms-full.txt.
 
 Consumers load their own Bootstrap 6 CSS, then a locally vendored copy of `config.css`, then their own application stylesheet. Keep and Clipboard synchronize only `config.css`. Do not edit consumer copies independently. Use the shared tokens when additional local styles are needed.
+
+Follow the [design principles](../DESIGN_PRINCIPLES.md) when authoring or reviewing any consumer UI.
