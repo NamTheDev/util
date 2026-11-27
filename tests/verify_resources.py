@@ -28,6 +28,10 @@ for required in (
     if required not in css:
         errors.append(f"design/config.css: missing {required}")
 
+for name in ("shell.css", "marquee.js"):
+    if not (root / "design" / name).is_file():
+        errors.append(f"missing shared asset {name}")
+
 if errors:
     raise SystemExit("\n".join(errors))
 print("Shared resource checks passed.")

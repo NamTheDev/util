@@ -1,13 +1,5 @@
-# Design configuration
+# Shared design system
 
-`design/config.css` is the only shared CSS configuration. It defines framework-independent semantic colors, type, density, shape and motion tokens and maps them to Bootstrap 6 root variables. It does not contain a framework build or application component/layout rules.
+See [design principles](DESIGN_PRINCIPLES.md). Vendor [config.css](config.css), [shell.css](shell.css) and [marquee.js](marquee.js) as a set. Load Bootstrap 6 first, then config and shell, then application-only styles. Use a header with .site-header, .header-inner, .brand-name and a .header-links nav; insert stationary controls after the nav. The script adds the accessible pause control. In applications whose header is rendered dynamically, load the marquee after rendering it.
 
-The fixed palette is Catppuccin Mocha with Lavender. Do not provide a light-mode switch. See https://catppuccin.com/palette/ and https://getbootstrap.com/llms-full.txt.
-
-Consumers load their own Bootstrap 6 CSS, then a locally vendored copy of `config.css`, then an optional application stylesheet containing only the bare minimum of necessary custom CSS. Use Bootstrap components and utility classes first, and documented framework tokens for configuration. Do not duplicate utility behavior in custom selectors. Profile, keep and clipboard follow this rule; MeditorD is exempt. Keep and Clipboard synchronize only `config.css`. Do not edit consumer copies independently.
-
-Follow the [design principles](DESIGN_PRINCIPLES.md) when authoring or reviewing any consumer UI.
-
-## Licensing
-
-Preserve the copyright and MIT permission notices embedded in `config.css` when copying or distributing the shared stylesheet. See [repository license](../LICENSE) and [third-party notices](../THIRD_PARTY_NOTICES.md).
+Use .reading-layout for content with page and contents rails; use .app-navigation for functional controls above a fullscreen app. Link content is consumer-owned. Keep source licenses, compare asset hashes, and run consumer regression tests before deployment.
