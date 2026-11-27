@@ -32,6 +32,12 @@ for name in ("shell.css", "marquee.js"):
     if not (root / "design" / name).is_file():
         errors.append(f"missing shared asset {name}")
 
+for name in ("reading.html", "app.html"):
+    example = (root / "design/examples" / name).read_text(encoding="utf-8")
+    for required in ('../config.css', '../shell.css', '../marquee.js', 'namchill235 /', 'header-links'):
+        if required not in example:
+            errors.append(f"{name}: missing {required}")
+
 if errors:
     raise SystemExit("\n".join(errors))
 print("Shared resource checks passed.")
